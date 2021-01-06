@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eu
+
+fmt='    %-12s %-35s %s\n'
+
+list() {
+	for f in *.vim; do
+		desc1=$(head -n1 "$f" | sed 's/^" //')
+		desc2=$(sed '2q;d' "$f" | sed 's/^" \?//')
+		printf "$fmt" "${f%%.*}" "$desc1" "$desc2" | sed 's/ *$//'
+	done
+}
+
+#printf "$fmt" 'Filetype' 'What it matches' 'Regexp'
+printf "$fmt" 'Filetype' '[[ and ]]' 'g[ and g]'
+printf "$fmt" '--------' '---------' '---------'
+
+(cd after/ftplugin && list)

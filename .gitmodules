@@ -1,0 +1,72 @@
+[submodule "pack/vendor/start/mru"]
+	path = pack/vendor/start/mru
+	url = https://github.com/lvht/mru.git
+[submodule "pack/vendor/start/fzf"]
+	path = pack/vendor/start/fzf
+	url = https://github.com/lvht/fzf.git
+[submodule "pack/vendor/start/tagbar"]
+	path = pack/vendor/start/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "pack/vendor/start/ack"]
+	path = pack/vendor/start/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "pack/vendor/start/markdown"]
+	path = pack/vendor/start/markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "pack/vendor/start/tagbar-markdown"]
+	path = pack/vendor/start/tagbar-markdown
+	url = https://github.com/lvht/tagbar-markdown.git
+[submodule "pack/vendor/start/tender"]
+	path = pack/vendor/start/tender
+	url = https://github.com/jacoborus/tender.vim.git
+[submodule "pack/vendor/start/fugitive"]
+	path = pack/vendor/start/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/vendor/start/gitgutter"]
+	path = pack/vendor/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/vendor/start/vimagit"]
+	path = pack/vendor/start/vimagit
+	url = https://github.com/jreybert/vimagit.git
+[submodule "pack/vendor/start/tcomment"]
+	path = pack/vendor/start/tcomment
+	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "pack/vendor/start/phpcd"]
+	path = pack/vendor/start/phpcd
+	url = https://github.com/lvht/phpcd.vim.git
+[submodule "pack/vendor/start/phpfold"]
+	path = pack/vendor/start/phpfold
+	url = https://github.com/lvht/phpfold.vim.git
+[submodule "pack/vendor/start/nerdtree"]
+	path = pack/vendor/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/vendor/start/stim"]
+	path = pack/vendor/start/stim
+	url = https://github.com/ironhouzi/vim-stim.git
+[submodule "pack/vendor/start/tabular"]
+	path = pack/vendor/start/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "pack/vendor/start/toml"]
+	path = pack/vendor/start/toml
+	url = https://github.com/cespare/vim-toml.git
+[submodule "pack/vendor/start/nerdtree-git"]
+	path = pack/vendor/start/nerdtree-git
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+[submodule "pack/vendor/opt/deoplete"]
+	path = pack/vendor/start/deoplete
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "pack/vendor/opt/yarp"]
+	path = pack/vendor/opt/yarp
+	url = https://github.com/roxma/nvim-yarp
+[submodule "pack/vendor/opt/vim-hug-neovim-rpc"]
+	path = pack/vendor/opt/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "pack/vendor/start/jumpy"]
+	path = pack/vendor/start/jumpy
+	url = https://github.com/arp242/jumpy.vim
+[submodule "pack/vendor/start/tagbar-proto"]
+	path = pack/vendor/start/tagbar-proto
+	url = https://github.com/tenfyzhong/tagbar-proto.vim
+[submodule "pack/vendor/start/go"]
+	path = pack/vendor/start/go
+	url = https://github.com/fatih/vim-go
