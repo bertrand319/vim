@@ -25,7 +25,7 @@ highlight StatusLine guibg=#444444 guifg=#b3deef
 highlight StatusLineTerm guibg=#444444 guifg=#b3deef
 highlight StatusLineTermNC guibg=#444444 guifg=#999999
 
-nnoremap <silent> <c-u> :Mru<cr>
+nnoremap <silent> <c-m> :Mru<cr>
 nnoremap <silent> <c-p> :call fzf#Open()<cr>
 nnoremap <silent> <leader>t :TagbarToggle<cr>
 nnoremap <silent> <leader>e :NERDTreeToggle<cr>
@@ -104,9 +104,19 @@ call plug#begin('~/.vim/plugged')
 " Plug '~/my-prototype-plugin'
 Plug 'rkulla/pydiction'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 " Initialize plugin system
 call plug#end()
 
 " Setup pydiction
 let g:pydiction_location = '/home/bertrand/.vim/plugged/pydiction/complete-dict'
 let g:pydiction_menu_height = 3
+
+
