@@ -3,7 +3,7 @@ set encoding=utf-8
 set fileencodings=utf-8,gb18030
 set backspace=eol,start,indent
 set laststatus=2
-set colorcolumn=80
+" set colorcolumn=80
 set cursorline
 set linebreak
 set autoindent
@@ -12,6 +12,10 @@ set smartcase
 set ruler
 set diffopt+=internal,indent-heuristic,algorithm:patience
 set showcmd
+set nu
+
+" split the file at right side
+set splitright
 
 filetype plugin indent on
 syntax on
@@ -31,6 +35,7 @@ nnoremap <silent> <leader>t :TagbarToggle<cr>
 nnoremap <silent> <leader>e :NERDTreeToggle<cr>
 nnoremap <silent> <leader>f :NERDTreeFind<cr>
 nnoremap <silent> <leader>c :call lv#Term()<cr>
+nnoremap <silent> <c-c> :!/usr/local/bin/ctags -R<cr>
 
 function! MyTabLabel(n)
 	let buflist = tabpagebuflist(a:n)
@@ -104,6 +109,9 @@ call plug#begin('~/.vim/plugged')
 " Plug '~/my-prototype-plugin'
 Plug 'rkulla/pydiction'
 
+" NerdTree Git
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -119,4 +127,6 @@ call plug#end()
 let g:pydiction_location = '/home/bertrand/.vim/plugged/pydiction/complete-dict'
 let g:pydiction_menu_height = 3
 
-
+" Comment in Visual Mode
+vnoremap <silent> # :s/^/#/<cr>:noh<cr>
+vnoremap <silent> -# :s/^#//<cr>:noh<cr>
