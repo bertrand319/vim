@@ -112,6 +112,10 @@ Plug 'rkulla/pydiction'
 " NerdTree Git
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" FZF 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -130,3 +134,7 @@ let g:pydiction_menu_height = 3
 " Comment in Visual Mode
 vnoremap <silent> # :s/^/#/<cr>:noh<cr>
 vnoremap <silent> -# :s/^#//<cr>:noh<cr>
+
+" Display hidden files in NerdTree
+let NERDTreeShowHidden=1
+
