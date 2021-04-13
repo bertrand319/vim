@@ -14,6 +14,13 @@ set diffopt+=internal,indent-heuristic,algorithm:patience
 set showcmd
 set nu
 
+" auto add }
+"set smartindent
+"set tabstop=4
+"set shiftwidth=4
+"set expandtab
+"imap{ {}<ESC>i<CR><ESC>O
+
 " split the file at right side
 set splitright
 
@@ -73,10 +80,7 @@ autocmd FileType vim nnoremap <buffer> <c-]> :call vim#Jump()<cr>
 
 command -nargs=1 ExpandTab call lv#ExpandTab(<f-args>)
 
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeChDirMode = 2
-let g:NERDTreeWinSize=24
-let g:ackprg = 'ag --vimgrep'
+" let g:ackprg = 'ag --vimgrep'
 let g:tagbar_compact = 1
 let g:tagbar_iconchars = ['▸', '▾']
 let g:tagbar_width = 30
@@ -135,6 +139,16 @@ let g:pydiction_menu_height = 3
 vnoremap <silent> # :s/^/#/<cr>:noh<cr>
 vnoremap <silent> -# :s/^#//<cr>:noh<cr>
 
+" NERDTree configure
 " Display hidden files in NerdTree
 let NERDTreeShowHidden=1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeWinPos = 0
+let g:NERDTreeChDirMode = 2
+let g:NERDTreeWinSize=24
+" Prevent FZF open file inside NERDTree buffer
+au BufEnter * if bufname('#') =~ 'NERD_tree' && bufname('%') !~ 'NERD_tree' && winnr('$') > 1 | b# | exe "normal! \<c-w>\<c-w>" | :blast | endif
 
+" FZF Configure
+nnoremap <silent> <c-g> :Ag<cr>
+nnoremap <silent> <c-f> :Files<cr>
